@@ -4,5 +4,7 @@
     <string name="app_name">BluetoothPeripheryClient</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_bluetooth_control_center">BluetoothControlCenter</string>
+    <string name="title_activity_find_new_container">FindNewContainer</string>
 
 </resources>

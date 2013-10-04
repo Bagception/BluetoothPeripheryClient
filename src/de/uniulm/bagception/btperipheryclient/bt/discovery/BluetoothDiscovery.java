@@ -1,4 +1,4 @@
-package de.uniulm.bagception.btperipheryclient.service;
+package de.uniulm.bagception.btperipheryclient.bt.discovery;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,9 +16,13 @@ import android.bluetooth.BluetoothSocket;
 import android.os.ParcelUuid;
 import android.util.Log;
 
+/**
+ * 
+ * @author phil
+ *
+ */
 public class BluetoothDiscovery implements BagceptionBTServiceInterface{
 	private BluetoothAdapter bluetoothDevice = null;
-	private List<Void> devicesRunningBagceptionService = Collections.synchronizedList(new ArrayList<Void>());
 
 	public BluetoothDiscovery() {
 		reInit();
@@ -26,7 +30,6 @@ public class BluetoothDiscovery implements BagceptionBTServiceInterface{
 	
 	public void reInit(){
 		bluetoothDevice = BluetoothAdapter.getDefaultAdapter();
-		devicesRunningBagceptionService.clear();
 	}
 	
 	private BluetoothAdapter getAdapter(){

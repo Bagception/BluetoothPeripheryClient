@@ -3,8 +3,10 @@
     package="de.uniulm.bagception.btperipheryclient"
     android:versionCode="1"
     android:versionName="1.0" >
-  	<uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="18" />
@@ -23,7 +25,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".service.BluetoothService"></service>
+
+        <service android:name="de.uniulm.bagception.btperipheryclient.service.BluetoothService" >
+        </service>
+
+        <activity
+            android:name="de.uniulm.bagception.btperipheryclient.FindNewContainer"
+            android:label="@string/title_activity_bluetooth_control_center" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.uniulm.bagception.btperipheryclient.FindNewContainer"
+            android:label="@string/title_activity_find_new_container" >
+        </activity>
     </application>
 
 </manifest>

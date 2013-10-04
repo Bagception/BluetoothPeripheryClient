@@ -1,4 +1,4 @@
-package de.uniulm.bagception.btperipheryclient.service;
+package de.uniulm.bagception.btperipheryclient.bt.discovery;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,7 +26,7 @@ public class BluetoothDiscoveryActor extends BroadcastActor<BluetoothDiscoveryRe
 	}
 
 	@Override
-	public void register(Activity a) {
+	public void register(Context a) {
 		IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
 	    filter.addAction(BluetoothDevice.ACTION_UUID);
 	    filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
